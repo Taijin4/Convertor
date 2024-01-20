@@ -52,8 +52,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MainActivity extends FlutterActivity {
     private static final String CHANNEL = "conversion";
-    private static final String CLIENT_ID = "1ab88cd8e4fb415d890e6634fa7fa97f";
-    private static final String CLIENT_SECRET = "c420592a44ba473e9961fb31cd17079b";
+    private SecretKeys secretKeys = new SecretKeys();
+    private final String CLIENT_ID = secretKeys.getClientId();
+    private final String CLIENT_SECRET = secretKeys.getClientSecret();
     private static final String REDIRECT_URI = "com.example.convertor://callback/?source=spotify";
     private static User spotifyUser = null;
     public static SpotifyApi spotifyApi;

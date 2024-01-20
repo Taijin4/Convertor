@@ -1,16 +1,31 @@
-# convertor
+# Convertor
 
-A new Flutter project.
+Convertor est une application qui vous permets de convertir des playlist entre les plateformes de
+streaming Deezer et Spotify.
 
-## Getting Started
+## Fonctionnalitées :
+- Connection au compte spotify
+- Récupération des playlist spotify
+- Récupération de toutes les informations de la playlist sélctionnée (durée, image, musiques)
 
-This project is a starting point for a Flutter application.
+## Futures fonctionnalitées :
+- Mêmes fonctionnalitées que Spotify mais pour Deezer (code déjà fonctionnel, reste plus qu'à l'implémenter
+dans l'application mobile)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Images de l'application :
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](assets/markdown/home.jpg)
+
+![image](assets/markdown/conversion1.jpg)
+
+![image](assets/markdown/conversion2.jpg)
+
+![image](assets/markdown/conversion3.jpg)
+
+![image](assets/markdown/spotifyPlaylist.jpg)
+
+## Langages utilisés :
+- Dart
+- Flutter
+- Java

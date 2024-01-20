@@ -68,7 +68,7 @@ public class MainActivity extends FlutterActivity {
 
 
 
-    private static final String REDIRECT_URI_DEEZER = "http://localhost:8080/callback/?source=deezer";
+    private static final String REDIRECT_URI_DEEZER = "http://37.65.52.171:22";
 
 
     @Override
@@ -146,7 +146,13 @@ public class MainActivity extends FlutterActivity {
     }
 
     private void authentificationDeezer() throws DeezerException {
+        // Step 1. Create login URL.
+        String loginUrl = deezerApi.auth().getLoginUrl(616404, REDIRECT_URI_DEEZER, Permission.MANAGE_LIBRARY);
 
+        // Step 2. Open the login URL in the default browser
+        Uri uri = Uri.parse(loginUrl);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 
@@ -183,6 +189,8 @@ public class MainActivity extends FlutterActivity {
         }
     }
 
+
+
     private void handleSpotifyAuthorizationCode(String authorizationCode) {
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -215,6 +223,8 @@ public class MainActivity extends FlutterActivity {
         DeezerAccessToken accessToken = deezerApi.auth().getAccessToken(616404, "b1dc56aad0e4f1dae765b73ac7a1bdd1", authorizationCodeDeezer).execute();
         deezerApi.setAccessToken(accessToken);
     }
+
+
 
 
     public static void handleUser(User user) {
